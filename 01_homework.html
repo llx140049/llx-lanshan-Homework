@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 350px; /* 边框宽度贴合内容 */
+            margin: 20px auto; /* 居中显示 */
+            padding: 15px; /* 内容与边框留间距 */
+            border: 1px solid #65b8f393; /* 边框样式 */
+        }
+       
+    </style>
+</head>
+
+<body>
+    
+    <form action="/"method="post">
+    <fieldset>
+    <legend></legend>
+    <!--用户名下拉列表-->
+    <label for=""></label>
+    <select id="username" name="username">
+        <option value="用户名">用户名</option>
+        <option value="邮箱">邮箱</option>
+        
+    </select>
+    <!--文本输入-->
+    <input type="text" id="name" name="name" required>
+   <a href="https://www.runoob.com">没有账号？</a>
+    <br>
+    <!--密码输入框-->
+    密码：<input type="password" id="password" name="password" required>
+    <br>
+   
+    <!--保存下拉列表-->
+    保存密码：<select id="keeppassword" name="keeppassword">
+        <option value="一天">一天</option>
+        <option value="三个月">三个月</option>
+        <option value="永远">永远</option>
+    </select>
+    <input type="button" value="ok">
+    <label for="sign-in">自动登录</label>
+    <br>
+    <div style="text-align: center;"><!--让块居中-->
+    <input type="submit" value="立即登录">
+    <a href="https://www.runoob.com">忘记密码？</a>
+    </div>
+    </fieldset>
+    </form>
+    <form action="/"method="post">
+    <fieldset>
+    <legend></legend>
+     <!--单选性别-->
+        <b>我要找:</b>男朋友<input type="radio" name="sex" value="1" checked />
+        女朋友<input type="radio" name="sex" value="2"/><br />
+        年龄:<select name="age">
+            <option value="1">19</option>
+            <option value="2">20</option>
+            <option value="3">21</option>
+        </select>
+        -<select name="age">
+            <option value="1">25</option>
+            <option value="2">30</option>
+            <option value="3">35</option>
+        </select>
+        现居地:<select name="place">
+            <option value="1">=不限=</option>
+            <option value="2">本地</option>
+            <option value="3">附近城市</option>
+            <option value="4">附近省市</option>
+        </select><br>
+        有无照片:<select name="photo">
+            <option value="1">不限</option>
+            <option value="2">有</option>
+            <option value="3">没有</option>
+            </select>
+            <input type="submit" value="搜索">
+            <a href="https://www.runoob.com">高级搜索</a>
+    </form>
+</body>
+</html>
