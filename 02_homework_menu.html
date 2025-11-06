@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 0 20px;
+        background-color:#f5f7fa;
+    }
+    .menu {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px #e1dff5;
+         overflow: hidden;
+    }
+    .menu-head-background {
+        background-color: #141131;
+        padding: 15px 30px;
+    }
+    .menu-head {
+        color: #A60B35;
+        font-size: 35px;
+        letter-spacing: 0.5px;
+    }
+    .dish-section {
+        padding: 25px 30px;
+    }
+    .dish-kind {
+        color: #A60B35;
+        margin: 0 0 20px 0;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #86D6EE;
+        font-size: 25px;
+        
+    }
+    .different-dish {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0;
+        border-bottom: 1px dotted #86D6EE; 
+    }
+    .dish-name {
+        color: #141131; 
+        font-size: 19px;
+        margin: 0 0 6px 0;
+        font-weight: 600;
+    }
+    .dish-name-desc {
+        display: flex;
+            align-items: center; 
+            gap: 15px; 
+    }
+    .dish-desc {
+        color: #04789E;
+        font-size: 14px;
+        margin: 0;
+        line-height: 2;
+        max-width: 600px;
+        
+    }
+    .dish-price {
+        color:#A60B35;
+        font-size: 18px;
+        font-weight: 600;
+        
+    }
+    .other-dish {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 16px;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        background-color: #edecec;
+    }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-head-background">
+            <h1 class="menu-head">兮の神秘厨房~</h1>
+        </div>
+
+        <div class="dish-section">
+            <h2 class="dish-kind">前菜</h2>
+
+            <div class="different-dish">
+                <div class="dish-name-desc">
+                    <p class="dish-name">芹菜丝凉拌胡萝卜丝</p>
+                    <p class="dish-desc">激发食欲的新鲜蔬菜</p>
+                </div>
+                <span class="dish-price">¥99</span>
+            </div>
+            
+            <div class="different-dish">
+                <div class="dish-name-desc">
+                    <p class="dish-name">芥末秋葵</p>
+                    <p class="dish-desc">醒下瞌睡</p>
+                </div>
+                <span class="dish-price">¥99</span>
+            </div>
+        </div>
+
+        <div class="dish-section">
+            <h2 class="dish-kind">主菜</h2>
+
+            <div class="different-dish">
+                <div class="dish-name-desc">
+                    <p class="dish-name">榴莲螺蛳粉</p>
+                    <p class="dish-desc">香喷喷~</p>
+                </div>
+                <span class="dish-price">¥99</span>
+            </div>
+            
+        
+            <div class="different-dish">
+                <div class="dish-name-desc">
+                    <p class="dish-name">肥肠臭豆腐</p>
+                    <p class="dish-desc">香的嘞~</p>
+                </div>
+                <span class="dish-price">¥99</span>
+            </div>
+        </div>
+        <div class="dish-section">
+            <h2 class="dish-kind">甜点</h2>
+
+            <div class="other-dish">
+                <div class="dish-name-desc">
+                    <p class="dish-name">脑花慕斯</p>
+                    <p class="dish-desc">尽享丝滑</p>
+                </div>
+                <span class="dish-price">¥9999</span>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
