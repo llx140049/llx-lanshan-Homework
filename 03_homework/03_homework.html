@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>克莱因澜播放器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            gap: 40px;
+
+        }
+        .video_container {
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-left: 100px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            gap: 20px;
+            width: calc(100% - 80px);
+            display: flex;
+            justify-content: flex-start;/*元素靠左对齐*/
+            
+
+        }
+        .video {
+            width: 280px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            overflow: hidden;
+            
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            transition: transform 0.3s ease;
+        }
+        .video:hover {
+            transform: translateY(-5px);
+        }
+        .video-thumb {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-size: cover;      /*等比缩放覆盖整个区域 */
+            background-position: center;
+        }
+        .video-info {
+            padding: 10px;
+        }
+        .video-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: rgb(2, 40, 115);
+            display: flex;
+            flex-direction: column;
+            height: 3em;
+            overflow: hidden;
+            
+        }
+        .video-channel {
+            color:#5e696d;
+            font-size: 14px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        .video-look-begin {
+            color: #7f848e;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .duration {
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            font-size: 13px;
+            
+            padding: 3px 6px;
+            bottom: 10px;
+            right: 10px;
+            position: absolute;
+            border-radius: 3px;
+
+        }
+        .thumb1 {
+            background-image: url('video1.jpg');
+        }
+        .thumb2 {
+            background-image: url('video2.jpg');
+        }
+        .thumb3 {
+            background-image: url('video3.jpg');
+        }
+        .thumb4 {
+            background-image: url('video4.jpg');
+        }
+        .thumb5 {
+            background-image: url('video5.jpg');
+        }
+        .thumb6 {
+            background-image: url('video6.jpg');
+        }
+
+        @media (max-width: 768px) {
+            .video {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .video {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (min-width: 1025px) {
+            .video {
+                width: calc(33.33% - 20px);
+            }
+        }
+        .down-info-container {
+            background-color: rgb(2, 40, 115);
+            color: aliceblue;
+            font-size: small;
+            height:150px;
+            width: 100%;
+            
+            
+        }
+        .down-info {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 13px;
+            padding: 6px 12px;
+        }
+        .header-contianer {
+            background-color: rgb(2, 40, 115);
+            color: aliceblue;
+            font-size: small;
+            display: flex;
+            justify-content: space-between;
+            height:80px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .header-title {
+            font-size: 30px;
+            padding: 12px 12px 12px;
+            
+        }
+        .header-submit {
+            font-size: 30px;
+            padding: 12px 12px 12px;
+        }
+        ul {
+            list-style-type: none;
+            margin-top: 100px;
+            margin-bottom: 170px;
+            padding: 0;
+            width: 80px;
+           
+            background-color: rgba(2, 40, 115, 0.158);
+            position: absolute;
+            
+            
+        }
+        li a {/*li a 意为此选择器只对li里面的a有效*/
+            display: block;
+            color: rgb(2, 40, 115);
+            padding: 8px 16px;
+            text-decoration:none;/*去掉下划线*/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+
+        }
+        li a.active {
+            background-color: #7f848e;
+            color: white;
+
+        }
+        li a:hover {
+            background-color: #7f848e;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li><a class="active" href="">主页</a></li>
+        <li><a href="https://github.com/llx140049">关注</a></li>
+        <li><a href="https://www.bilibili.com/">发现</a></li>
+        <li><a href="https://www.runoob.com/css">收藏</a></li>
+    </ul>
+    <div class="header-contianer">
+            <div class="header-title">YOUTOBEE</div>
+            <div class="header-submit">
+                <input type="submit" value="登录">
+            </div>
+        </div>
+        
+<div class="container">
+        
+        <div class="video_container">
+            <div class="video">
+                
+                    <a href="https://www.bilibili.com/video/BV1wLmkYSEES/?spm_id_from=333.337.search-card.all.click">
+                    <div class="video-thumb thumb1">
+                        <div class="duration">5:07</div>
+                    </div>
+                    </a>
+                
+                <div class="video-info">
+                    <div class="video-title"> Leviathan，利维坦，《圣经》中的庞然巨兽</div>
+                    <div class="video-channel">兮酱的每日歌曲</div>
+                    <div class="video-look-begin">
+                        <span>1万</span>
+                        <span>2天前</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="video">
+                <a href="https://www.bilibili.com/video/BV1Bwhdz7EFR/?spm_id_from=333.337.search-card.all.click">
+                    <div class="video-thumb thumb4">
+                        <div class="duration">15:07</div>
+                    </div>
+                </a>
+                <div class="video-info">
+                    <div class="video-title">[重返未来1999剪辑]暴雨落下，世界倒流</div>
+                    <div class="video-channel">Timekeeper</div>
+                    <div class="video-look-begin">
+                        <span>12万</span>
+                        <span>13：14</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="video">
+                <a href="https://www.runoob.com/html/html-links.html">
+                    <div class="video-thumb thumb3">
+                        <div class="duration">15:07</div>
+                    </div>
+                </a>
+                <div class="video-info">
+                    <div class="video-title">风景速途</div>
+                    <div class="video-channel">克莱因澜</div>
+                    <div class="video-look-begin">
+                        <span>1.2万</span>
+                        <span>4天前</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="video">
+                <a href="https://www.bilibili.com/video/BV11p4y1A7uU/?spm_id_from=333.337.search-card.all.click&vd_source=b82e4c76d8426ffe82641cfe75ae8c08">
+                    <div class="video-thumb thumb2">
+                        <div class="duration">5:07</div>
+                    </div>
+                </a>
+                <div class="video-info">
+                    <div class="video-title">[石纪元]"Science is ellgant!"</div>
+                    <div class="video-channel">Dr.X</div>
+                    <div class="video-look-begin">
+                        <span>13万</span>
+                        <span>2天前</span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="video">
+                <a href="https://www.bilibili.com/video/BV1KpjMztEJj/?spm_id_from=333.337.search-card.all.click&vd_source=b82e4c76d8426ffe82641cfe75ae8c08">
+                    <div class="video-thumb thumb5">
+                        <div class="duration">15:07</div>
+                    </div>
+                </a>
+                <div class="video-info">
+                    <div class="video-title">宝宝你是一个香香软软甜甜的小蛋糕！</div>
+                    <div class="video-channel">llx</div>
+                    <div class="video-look-begin">
+                        <span>12万</span>
+                        <span>2天前</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    <div class="down-info-container">
+            <div class="down-info">
+                <p>Thanks for viewing</p>
+                <p>Made by llx</p>
+                <p>llx  2025/12/17</p>
+                <p><a href="https://github.com/llx140049" title="OvO" style="color: aliceblue;">@作者</a></p>
+            </div>
+    </div>
+    
+</body>
+</html>
